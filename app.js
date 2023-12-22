@@ -15,6 +15,7 @@ app.get("/getdata", async(req,res)=>{
     res.json(result)
 })
 
+
 app.post("/adddata", async(req,res)=>{
     const newData = new FormModel({...req.body})
     await newData.save();
